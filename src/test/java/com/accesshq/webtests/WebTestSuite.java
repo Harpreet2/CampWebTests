@@ -1,5 +1,7 @@
 package com.accesshq.webtests;
 
+import com.accesshq.ui.FormsPage;
+import com.accesshq.ui.HomePage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,6 +22,7 @@ public class WebTestSuite {
     public void SetUp() {
         driver = new ChromeDriver();
         driver.get("https://d18u5zoaatmpxx.cloudfront.net/");
+        driver.manage().window().maximize();
 
     }
 
@@ -43,7 +47,7 @@ public class WebTestSuite {
     }
 
     @Test
-    public void TestCLickMeButtonTest() throws InterruptedException {
+    public void TestCLickMeButtonTest() {
 
         //Arrange
 //        List<WebElement> formELements = driver.findElements(By.className("form"));
@@ -71,9 +75,8 @@ public class WebTestSuite {
     @Test
     public void TestHomeButtonTest() {
 
-        var homeButton = getButton();
+        clickHomeButton();
 
-        homeButton.click();
         var alert = driver.findElement(By.className("alert-message"));
 
         new WebDriverWait(driver, 10).
@@ -84,31 +87,52 @@ public class WebTestSuite {
     }
 
     @Test
-    public void TestFormTest() {
-        
+    public void errorMessageTest() {
+
+        //Arrange
+        new HomePage(driver).clickFormsButton();
+        FormsPage forms = new FormsPage(driver);
+
+        //Act
+        forms.clickSubmit();
+
+        //Assert
+        Assertions.assertEquals(true, forms.isNameErrDisplayed());
+        Assertions.assertEquals(true, forms.isEmailErrDisplayed());
+        Assertions.assertEquals(true, forms.isAgreeErrDisplayed());
+
     }
 
-    private WebElement getButton() {
-        for (WebElement currentButton : driver.findElements(By.tagName("button"))) {
-            if (currentButton.getText().equals("home")) {
-                return currentButton;
-            }
-        }
-        throw new NotFoundException("Could not find home button.");
-    }
+    @Test
+    public void submitFormTest() {
 
-//    private WebElement getAlert() {
-//        for (WebElement currentAlert : driver.findElements(By.className("alert-message"))) {
-//            if (currentAlert.getText().equals("You clicked the home button")) {
-//                return currentAlert;
-//            }
-//        }
-//        throw new NotFoundException("Could not find Alert Box.");
-//    }
+        //Arrange
+        new HomePage(driver).clickFormsButton();
+        FormsPage forms = new FormsPage(driver);
+
+        //Act
+        forms.setName("Harpreet");
+        forms.setEmail("Test@test.com");
+        forms.setState("VIC");
+        forms.clickAgree();
+        forms.clickSubmit();
+        new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(forms.getPopUpMessageBox()));
+
+        //Assert
+        Assertions.assertEquals(true, forms.isPopUpDisplayed());
+
+    }
+    public void clickHomeButton() {
+
+        var home = driver.findElement(By.cssSelector("button[aria-label='home']"));
+        home.click();
+
+    }
 
 
     @AfterEach
     public void CleanUp() {
         driver.quit();
     }
+
 }
