@@ -39,4 +39,11 @@ public class HomePage {
 
     }
 
+    public void clickHomeIconButton() {
+
+        var home = driver.findElement(By.cssSelector("button[aria-label='home']"));
+        home.click();
+
+    }
+
 }

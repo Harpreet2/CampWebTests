@@ -15,16 +15,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class WebTestSuite {
-    WebDriver driver;
+public class WebTests extends BaseTestSuite {
 
-    @BeforeEach
-    public void SetUp() {
-        driver = new ChromeDriver();
-        driver.get("https://d18u5zoaatmpxx.cloudfront.net/");
-        driver.manage().window().maximize();
-
-    }
 
     @Test
     public void DemoTest() {
@@ -50,8 +42,6 @@ public class WebTestSuite {
     public void TestCLickMeButtonTest() {
 
         //Arrange
-//        List<WebElement> formELements = driver.findElements(By.className("form"));
-//        var upDownButton = formELements.get(1).findElement(By.tagName("a"));
         var upDownButton = driver.findElement(By.cssSelector("a[role='button']"));
 
         //Act
@@ -75,13 +65,15 @@ public class WebTestSuite {
     @Test
     public void TestHomeButtonTest() {
 
-        clickHomeButton();
-
+        //Arrange
+        new HomePage(driver).clickHomeIconButton();
         var alert = driver.findElement(By.className("alert-message"));
 
+        //Act
         new WebDriverWait(driver, 10).
                 until(ExpectedConditions.textToBePresentInElement(alert, "You clicked the home button"));
 
+        //Assert
         Assertions.assertEquals("You clicked the home button", alert.getText());
 
     }
@@ -122,17 +114,9 @@ public class WebTestSuite {
         Assertions.assertEquals(true, forms.isPopUpDisplayed());
 
     }
-    public void clickHomeButton() {
-
-        var home = driver.findElement(By.cssSelector("button[aria-label='home']"));
-        home.click();
-
-    }
 
 
-    @AfterEach
-    public void CleanUp() {
-        driver.quit();
-    }
+
+
 
 }

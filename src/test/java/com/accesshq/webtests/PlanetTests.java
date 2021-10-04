@@ -1,5 +1,6 @@
 package com.accesshq.webtests;
 
+import com.accesshq.ui.HomePage;
 import com.accesshq.ui.PlanetTile;
 import com.accesshq.ui.PlanetsPage;
 import org.junit.jupiter.api.AfterEach;
@@ -12,20 +13,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.function.Predicate;
 
 
-public class PlanetTestSuite {
-    WebDriver driver;
-
-    @BeforeEach
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.get("https://d18u5zoaatmpxx.cloudfront.net/#/planets");
-        driver.manage().window().maximize();
-    }
+public class PlanetTests extends BaseTestSuite {
 
     @Test
     public void jupitersDistanceFromSunTest() {
 
         //Arrange
+        new HomePage(driver).clickPlanetButton();
         PlanetsPage planetsPage = new PlanetsPage(driver);
 
         //Act
@@ -41,6 +35,7 @@ public class PlanetTestSuite {
     public void matchPlanetRadiusTest() {
 
         //Arrange
+        new HomePage(driver).clickPlanetButton();
         PlanetsPage planetsPage = new PlanetsPage(driver);
 
         //Act
@@ -59,6 +54,7 @@ public class PlanetTestSuite {
     public void farthestPlanetTest() {
 
         //Arrange
+        new HomePage(driver).clickPlanetButton();
         PlanetsPage planetsPage = new PlanetsPage(driver);
 
         //Act
@@ -68,11 +64,6 @@ public class PlanetTestSuite {
         //Assert
         Assertions.assertEquals(planetsPage.getFarthestDistance(), planet.getDistance());
 
-    }
-
-    @AfterEach
-    public void cleanUp() {
-        driver.quit();
     }
 
 }

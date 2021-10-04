@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="011d66a7-0551-4ea7-9b9c-e395f7b42f4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/strategies/NameMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/strategies/RadiusMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/strategies/Strategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/ui/FormsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/ui/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/ui/PlanetTile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/ui/PlanetsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/webtests/PlanetTestSuite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/webtests/BaseTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-camp-webtests.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/code-camp-webtests.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-camp-webtests.iws" beforeDir="false" afterPath="$PROJECT_DIR$/code-camp-webtests.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/accesshq/webtests/WebTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/webtests/WebTestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/accesshq/webtests/WebTestSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/accesshq/webtests/WebTestSuite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/accesshq/webtests/PlanetTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/webtests/PlanetTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/accesshq/webtests/WebTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/accesshq/webtests/WebTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/accesshq/strategies/RadiusMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/accesshq/strategies/RadiusMatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/accesshq/webtests/PlanetTestSuite$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/accesshq/webtests/PlanetTestSuite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/accesshq/webtests/WebTestSuite.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +267,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.PlanetTestSuite.matchPlanetRadiusTest">
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.accesshq.webtests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.WebTests.TestHomeButtonTest">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -285,7 +289,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlanetTestSuite.farthestPlanetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlanetTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-camp-webtests" />
       <extension name="coverage">
         <pattern>
@@ -294,9 +298,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.accesshq.webtests" />
-      <option name="MAIN_CLASS_NAME" value="com.accesshq.webtests.PlanetTestSuite" />
-      <option name="METHOD_NAME" value="farthestPlanetTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.accesshq.webtests.PlanetTests" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -306,7 +309,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlanetTestSuite.jupitersDistanceFromSun" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlanetTests.jupitersDistanceFromSunTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-camp-webtests" />
       <extension name="coverage">
         <pattern>
@@ -315,28 +318,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.accesshq.webtests" />
-      <option name="MAIN_CLASS_NAME" value="com.accesshq.webtests.PlanetTestSuite" />
-      <option name="METHOD_NAME" value="jupitersDistanceFromSun" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlanetTestSuite.jupitersDistanceFromSunTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="code-camp-webtests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.accesshq.webtests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.accesshq.webtests" />
-      <option name="MAIN_CLASS_NAME" value="com.accesshq.webtests.PlanetTestSuite" />
+      <option name="MAIN_CLASS_NAME" value="com.accesshq.webtests.PlanetTests" />
       <option name="METHOD_NAME" value="jupitersDistanceFromSunTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -348,7 +330,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlanetTestSuite.matchPlanetRadiusTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebTests.TestHomeButtonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-camp-webtests" />
       <extension name="coverage">
         <pattern>
@@ -357,8 +339,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.accesshq.webtests" />
-      <option name="MAIN_CLASS_NAME" value="com.accesshq.webtests.PlanetTestSuite" />
-      <option name="METHOD_NAME" value="matchPlanetRadiusTest" />
+      <option name="MAIN_CLASS_NAME" value="com.accesshq.webtests.WebTests" />
+      <option name="METHOD_NAME" value="TestHomeButtonTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -369,7 +351,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebTestSuite.TestHomeButtonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebTests.errorMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-camp-webtests" />
       <extension name="coverage">
         <pattern>
@@ -378,8 +360,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.accesshq.webtests" />
-      <option name="MAIN_CLASS_NAME" value="com.accesshq.webtests.WebTestSuite" />
-      <option name="METHOD_NAME" value="TestHomeButtonTest" />
+      <option name="MAIN_CLASS_NAME" value="com.accesshq.webtests.WebTests" />
+      <option name="METHOD_NAME" value="errorMessageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebTests.submitFormTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code-camp-webtests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.accesshq.webtests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.accesshq.webtests" />
+      <option name="MAIN_CLASS_NAME" value="com.accesshq.webtests.WebTests" />
+      <option name="METHOD_NAME" value="submitFormTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -403,11 +406,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlanetTestSuite.matchPlanetRadiusTest" />
-        <item itemvalue="JUnit.PlanetTestSuite.jupitersDistanceFromSunTest" />
-        <item itemvalue="JUnit.PlanetTestSuite.farthestPlanetTest" />
-        <item itemvalue="JUnit.PlanetTestSuite.jupitersDistanceFromSun" />
-        <item itemvalue="JUnit.WebTestSuite.TestHomeButtonTest" />
+        <item itemvalue="JUnit.WebTests.TestHomeButtonTest" />
+        <item itemvalue="JUnit.PlanetTests" />
+        <item itemvalue="JUnit.PlanetTests.jupitersDistanceFromSunTest" />
+        <item itemvalue="JUnit.WebTests.submitFormTest" />
+        <item itemvalue="JUnit.WebTests.errorMessageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -554,14 +557,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/accesshq/webtests/WebTestSuite.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/com/accesshq/webtests/WebTests.java</url>
           <line>70</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/com/accesshq/webtests/PlanetTestSuite.java</url>
-          <line>42</line>
-          <properties class="com.accesshq.webtests.PlanetTestSuite" method="matchPlanetRadiusTest">
+          <url>file://$PROJECT_DIR$/src/test/java/com/accesshq/webtests/PlanetTests.java</url>
+          <line>40</line>
+          <properties class="com.accesshq.webtests.PlanetTests" method="matchPlanetRadiusTest">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="4" />
